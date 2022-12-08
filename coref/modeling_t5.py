@@ -1081,7 +1081,7 @@ class T5Stack(T5PreTrainedModel):
 
             """ adding coref information """
             if not self.is_decoder and coref_information is not None:
-                if len(self.layers) > 6:
+                if len(self.block) > 6:
                     replace_layers = [8, 9, 10, 11]
                 else:
                     replace_layers = [3, 4, 5]
